@@ -1,0 +1,125 @@
+.sendMessageFormWrapper{
+  background-color: var(--color-gray-bg);
+  padding: 1.5rem;
+  align-self: center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  position: relative;
+
+  .signOutButton{
+    background: transparent;
+    color: var(--color-gray2);
+    border: none;
+
+    position: absolute;
+    top: 1.5rem;
+    left: 1.5rem;
+
+    cursor: pointer;
+
+    &:hover{
+      filter: brightness(0.9);
+    }
+  }
+
+  .userInformation{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-top: 1.5rem;
+
+    .userImage{
+      padding: 0.25rem;
+      background: linear-gradient(100deg, var(--color-pink) 0%, var(--color-roxo) 100%);
+      border-radius: 50%;
+      line-height: 0;
+
+      img {
+        width: 6rem;
+        height: 6rem;
+        border-radius: 50%;
+        clip-path: circle();
+        border: 6px solid var(--color-black1);
+      }
+    }
+
+    .userName{
+      font-size: var(--font-size-title2);
+      line-height: 30px;
+      margin-top: 1rem;
+    }
+
+    .userGithub{
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      
+      margin-top: 0.5rem;
+      color: var(--color-gray2);
+    }
+  }
+
+  .sendMessageForm{
+    display: flex;
+    flex-direction: column;
+    align-self: stretch;
+    
+    margin-top: 3rem;
+    background-color: var(--color-black3);
+
+    label{
+      padding: 1.125rem 1.5rem;
+      font-size: var(--font-size-body1);
+      background-color: var(--color-black4);
+      font-weight: bold;
+      text-align: left;
+    }
+
+    textArea{
+      background-color: transparent;
+      border: none;
+      padding: 1.5rem;
+      resize: none;
+      height: 160px;
+      color: var(--color-gray3);
+      font-size: var(--font-size-body2);
+      line-height: 24px;
+
+      &:focus{
+        outline: none;
+      }
+
+      &::placeholder{
+        color: var(--color-gray1);
+      }
+    }
+
+    button{
+      align-self: flex-end;
+      background-color: var(--color-roxo);
+      border: none;
+      cursor: pointer;
+      text-transform: uppercase;
+      font-size: calc(var(--font-size-body2) - 2px);
+      font-weight: 700;
+      height: 2.5rem;
+      color: #fff;
+      margin: 1.5rem;
+      padding: 0 2rem;
+  
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  
+      &:hover{
+        filter: brightness(0.9);
+      }
+    }
+  }
+}
